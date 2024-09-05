@@ -1,8 +1,9 @@
 #include "Cat.h"
 
-Cat::Cat(string nn, int ag):Member(ag)
+
+
+Cat::Cat(string nm, int ag):Member( nm, ag)
 {
-	nickname = nn;
 }
 
 int  Cat::torun(int ag)
@@ -11,7 +12,7 @@ int  Cat::torun(int ag)
 	if (ag < 5) {
 		L = 2000;
 	}
-	else {
+	else if(ag>=5) {
 		L = 1000;
 	}
 	return L;
@@ -23,13 +24,9 @@ int Cat::catchup(int ag)
 	if (ag < 5) {
 		H = 2;
 	}
-	else {
+	else if(ag>=5){
 		H = 1;
 	}
 	return H;
 }
 
-string Cat::Getnickname()const
-{
-	return nickname;
-}

@@ -11,11 +11,25 @@ int result(string nm,string nz ,int l,int h,int bh,int ns) {
 	int finich = 0;
 	if (bh == 1) {
 		if (h > ns) {
-			cout << "Participant" << "  " << nm << "  " << "passed the obstacle" << "  " << nz << "at the distance ->" << "  " << ns;
+			cout << "Participant" << "  " << nm << "  " << "passed the obstacle" << "__" <<  nz << "__" << "at the distance ->" << "  " << ns;
+			sumL = +h;
+			return sumL;
 		}
 		else if (h < ns) {
-			cout << "Participant" << "  " << nm << " did not pass the obstacle" << "  " << ns << "at the distance" << "  " << ns;
-			finich = 13;
+			cout << "Participant" << "  " << nm << " did not pass the obstacle" <<  "__" <<  ns << "__" << "at the distance" << "  " << ns;
+			finich = 13; 
+		}
+
+	}
+	else if (bh == 2) {
+		if (l > ns) {
+			cout << "Participant" << "  " << nm << "  " << "passed the obstacle" << "__" << nz << "__" << "at the distance ->" << "  " << ns; 
+			sumH = +l;
+			return sumH;
+		}
+		else if (l < ns) {
+			cout << "Participant" << "  " << nm << " did not pass the obstacle" << "__" << ns << "__" << "at the distance" << "  " << ns;
+			finich = 13; 
 		}
 
 	}
@@ -24,17 +38,24 @@ int result(string nm,string nz ,int l,int h,int bh,int ns) {
 
 int main(){
 
-	Member* sub1 = new Cat("Tom", 4);
-	sub1->torun(4);
-	sub1->catchup(4);
+	Member* sub1 = new Cat("Tom", 6);
+	sub1->torun(6);
+
+	sub1->catchup(6);
 
 
-	Obstacle* obj1 = new RunningTrack("black", 500, 0);
-	obj1->Overcome(500, 0);
+	Obstacle* obj1 = new RunningTrack("Black", 1500, 0);
+	obj1->Overcome(1500, 0);
 
 
-	string Nsub = sub1->Getnickname();
-	string Nobj=obj1->
+	string Nsub = sub1->GetName();
+	string Nobj = obj1->Getname();
+	int Lsub = sub1->torun(6);
+	int Hsub = sub1->catchup(6);
+	int Bsub = obj1->Overcome(1500, 0);
+	int NSobj = obj1->Howmany(1500, 0);
+	result(Nsub, Nobj, Lsub, Hsub, Bsub, NSobj);
+
 
 
 }

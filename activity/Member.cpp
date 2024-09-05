@@ -6,16 +6,22 @@ Member::Member(int ag)
 {
 	age = ag;
 }
-
+Member::Member(string nm, int ag) :Member(ag)
+{
+	name = nm;
+}
 int Member::torun(int ag)
 {
+	return 0;
 }
 
 int Member::catchup(int ag)
 {
+	return 0;
 }
 
-string Member::Getnickname() const
+string Member::GetName() const
 {
-	return string();
+	return name;
 }
+

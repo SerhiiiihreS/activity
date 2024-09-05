@@ -5,9 +5,9 @@ using namespace std;
 
 class RunningTrack :public Obstacle
 {
-	string name;
 public:
 	RunningTrack(string nm, int le, int he);
-	int Overcome(int le, int he);
+	int Overcome(int le,int he);
+    int Howmany(int le, int he);
 };
 
