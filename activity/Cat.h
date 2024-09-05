@@ -9,6 +9,5 @@ public:
 	Cat(string nm, int ag);
 	int torun(int ag);
 	int catchup(int ag);
-
 };
 

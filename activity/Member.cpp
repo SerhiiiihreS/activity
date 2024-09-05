@@ -25,3 +25,8 @@ string Member::GetName() const
 	return name;
 }
 
+int Member::Getage()
+{
+	return age;
+}
+

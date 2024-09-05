@@ -21,6 +21,16 @@ string Obstacle::Getname() const
     return name;
 }
 
+int Obstacle::GetLength() const
+{
+    return Length;
+}
+
+int Obstacle::Getheight() const
+{
+    return height;
+}
+
 int Obstacle::Howmany(int le, int he)
 {
     return 0;

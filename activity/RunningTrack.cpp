@@ -23,13 +23,16 @@ int RunningTrack::Overcome(int le,int he)
 int RunningTrack::Howmany(int le, int he)
 {
     int nss = 0;
-    if (le < 0) {
-        nss ==he;
-        return nss;
+    if (le > 0 && he<=0) {
+        nss =le;
+        cout << le;
+        return le;
     }
-    else if (he < 0) {
-        nss ==le;
-        return nss;
+    else if (he > 0 && le<=0) {
+        nss =he;
+        cout << he;
+        return he;
+        
     }
 }
 

@@ -12,6 +12,8 @@ public:
 	Obstacle(string nm, int le, int he);
 	virtual int Overcome(int le, int he);
 	virtual string Getname()const;
+	int GetLength()const;
+	int Getheight()const;
 	virtual int Howmany(int le, int he);
 };
 
