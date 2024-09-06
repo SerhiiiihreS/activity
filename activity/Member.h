@@ -11,7 +11,7 @@ public:
 	Member(string nm, int ag);
 	virtual int torun(int ag);
 	virtual int catchup(int ag);
-	string GetName()const;
-	int Getage();
+	virtual string GetName()const;
+	virtual int Getage()const;
 };
 
