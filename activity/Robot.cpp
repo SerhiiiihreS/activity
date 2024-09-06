@@ -22,7 +22,7 @@ int Robot::catchup(int ag)
 {
 	int H = 0;
 	if (ag < 2) {
-		H = 3;
+		H = 5;
 		return H;
 	}
 	else if (ag >= 2) {

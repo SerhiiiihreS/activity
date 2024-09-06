@@ -10,11 +10,11 @@ int  Cat::torun(int ag)
 {
 	int L=0;
 	if (ag < 5) {
-		L = 2000;
+		L = 5000;
 		return L;
 	}
 	else if(ag>=5) {
-		L = 1000;
+		L = 3000;
 		return L;
 	}
 	
@@ -24,11 +24,11 @@ int Cat::catchup(int ag)
 {
 	int H=0;
 	if (ag < 5) {
-		H = 2;
+		H = 6;
 		return H;
 	}
 	else if(ag>=5){
-		H = 1;
+		H = 4;
 		return H;
 	}
 }
