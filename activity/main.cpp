@@ -10,12 +10,10 @@
 using namespace std;
 
 int result(string nm,string nz ,int l,int h,int bh,int ns) {
-	int sum = 0;
 	int finich = 0;
 	if (bh == 1) {
 		if (h > ns) {
 			cout << "Participant" << "  " << nm << "  " << "passed the obstacle" << "__" <<  nz << "__" << "at the distance ->" << "  " << ns;
-			sum = +h;
 		}
 		else if (h < ns) {
 			cout << "Participant" << "  " << nm << " did not pass the obstacle" <<  "__" <<  nz << "__" << "at the distance" << "  " << ns;
@@ -26,7 +24,6 @@ int result(string nm,string nz ,int l,int h,int bh,int ns) {
 	else if (bh == 2) {
 		if (l > ns) {
 			cout << "Participant" << "  " << nm << "  " << "passed the obstacle" << "__" << nz << "__" << "at the distance ->" << "  " << ns; 
-			sum = +l;
 			
 		}
 		else if (l < ns) {
@@ -55,12 +52,11 @@ int main(){
 
 
 	int finich = 0;
-	int sum = 0;
+	int sum1 = 0;
 	for (int i = 0; i < 3; i++) {
 		for (int j = 0; j < 4; j++) { 
 			Member* sub = grp[i];
 			Obstacle* obj = ln[j];
-
 			string Nsub = sub->GetName(); 
 			string Nobj = obj->Getname(); 
 			int Pag = sub->Getage(); 
@@ -71,14 +67,14 @@ int main(){
 			int Bsub = obj->Overcome(Plg, Pht);
 			int NSobj = obj->Howmany(Plg, Pht);
 			finich=result(Nsub, Nobj, Lsub, Hsub, Bsub, NSobj);
-			sum = +Lsub+Hsub;
 			cout << endl; 
 			if (finich == 13) {
 				j = 4;
-				cout << "Passed ->" << sum<<endl; 
+				cout << "Passed ->" << sum1 << endl; 
 			}
-			
+			sum1 +=(Plg + Pht);
 		}
+		sum1 = 0;
 		cout << "_________________________________________________________________";
 		cout << endl;
 	}
